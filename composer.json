@@ -1,0 +1,26 @@
+{
+  "name": "ssitu/blueprints",
+  "description": "Shared traits, interfaces and abstracts for SSITU components.",
+  "type": "library",
+  "keywords": [
+    "php",
+    "trait",
+    "interface",
+    "abstracts"
+  ],
+  "homepage": "https://github.com/I-is-as-I-does/Blueprints",
+  "license": "MIT",
+  "readme": "README.md",
+  "authors": [
+    {
+      "name": "I-is-as-I-does",
+      "email": "66915011+I-is-as-I-does@users.noreply.github.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "SSITU\\Blueprints\\": "src"
+    }
+  }
+}
