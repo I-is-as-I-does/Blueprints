@@ -7,9 +7,9 @@ trait AdminModeTrait
 {
     private $adminMode = false;
 
-    public function enterAdminKey($key)
+    public function enterAdminKey(string $key, string $envIndex)
     {
-        $this->adminMode = password_verify($key, $_ENV['ADMIN_KEY']); //todo
+        $this->adminMode = password_verify($key, $_ENV[$envIndex]);
     }
 
     public function inAdminMode()
@@ -22,7 +22,7 @@ trait AdminModeTrait
         return [$this, 'inAdminMode'];
     }
 
-    protected function relayChecker($relatedClass)
+    protected function relayChecker(object $relatedClass)
     {
         if(method_exists($relatedClass, 'setModeChecker')){
             $relatedClass->setModeChecker($this->modeChecker());

@@ -6,7 +6,7 @@ namespace SSITU\Blueprints;
 trait HubModeTrait
 {
     protected $modeChecker;
-    public function setModeChecker($modeChecker)
+    public function setModeChecker(callable $modeChecker)
     {
         $this->modeChecker = $modeChecker;
     }

@@ -6,11 +6,11 @@ namespace SSITU\Blueprints;
 trait HubLogTrait {
     
     protected $hubLogger;
-    public function setHubLogger($hubLogger)
+    public function setHubLogger(callable $hubLogger)
     {
        $this->hubLogger = $hubLogger;
     }
-    protected function hubLog($level, $message, $context)
+    protected function hubLog(string|int $level, string $message, mixed $context)
     {
         return call_user_func_array($this->hubLogger, [$level, $message, $context]); 
     }

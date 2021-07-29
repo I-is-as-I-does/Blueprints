@@ -3,8 +3,8 @@
 
 namespace SSITU\Blueprints;
 
-interface HubModeInterface {
+interface HubLogInterface {
     
-    public function setModeChecker($modeChecker);
+    public function setHubLogger(callable $hubLogger);
 
 }

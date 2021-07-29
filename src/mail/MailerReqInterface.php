@@ -3,8 +3,7 @@
 
 namespace SSITU\Blueprints;
 
-interface HubLogInterface {
-    
-    public function setHubLogger($hubLogger);
-
+interface MailerReqInterface
+{
+    public function setMailer($mailer);
 }
