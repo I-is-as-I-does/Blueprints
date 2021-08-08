@@ -10,7 +10,7 @@ Currently:
 
 * AdminMode and HubMode (admin mode checker and relay):
   * interfaces and traits
-* FlexLogs and HubLog (Psr-3 'logger aware' implementation with a fallback, and relay):
+* FlexLogs (Psr-3 'logger aware' implementation with a fallback):
   * interfaces and traits
 
 ### Requirement

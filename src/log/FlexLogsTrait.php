@@ -1,7 +1,7 @@
 <?php
 /* This file is part of Blueprints | SSITU | (c) 2021 I-is-as-I-does */
 
-namespace SSITU\Blueprints;
+namespace SSITU\Blueprints\Log;
 
 trait FlexLogsTrait
 {
@@ -35,7 +35,7 @@ trait FlexLogsTrait
     }
 
     //@doc: if logger is set, local logs only retains last log entry
-    protected function log(string $level, string $message, mixed $context)
+    protected function log(string|int $level, string $message, mixed $context)
     {
         $argm = get_defined_vars();
         if (isset($this->logger)) {
@@ -43,18 +43,6 @@ trait FlexLogsTrait
             $this->localLogs = [$argm];
         } else {
             $this->localLogs[] = $argm;
-        }
-    }
-
-    protected function hubLogger()
-    {
-        return [$this, 'log'];
-    }
-
-    protected function relayLog(object $relatedClass)
-    {
-        if (method_exists($relatedClass, 'setHubLogger')) {
-            $relatedClass->setHubLogger($this->hubLogger());
         }
     }
 

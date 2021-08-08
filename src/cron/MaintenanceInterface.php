@@ -1,7 +1,9 @@
 <?php
-namespace SSITU\Kairos;
+/* This file is part of Blueprints | SSITU | (c) 2021 I-is-as-I-does */
 
-interface MaintenanceIntrf
+namespace SSITU\Blueprints\Cron;
+
+interface MaintenanceInterface
 {
     public function getDetails();
     public function getRslt();

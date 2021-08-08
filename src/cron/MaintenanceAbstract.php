@@ -1,8 +1,8 @@
 <?php
-/* This file is part of Onement:Kairos | SSITU | (c) 2021 I-is-as-I-does */
-namespace SSITU\Kairos;
+/* This file is part of Blueprints | SSITU | (c) 2021 I-is-as-I-does */
+namespace SSITU\Blueprints\Cron;
 
-abstract class MaintenanceAbstr implements MaintenanceIntrf
+abstract class MaintenanceAbstract implements MaintenanceInterface
 {
     protected $details = [];
     protected $rslt;

@@ -23,7 +23,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SSITU\\Blueprints\\": ["src/log/", "src/mode/","src/set/"]
+      "SSITU\\Blueprints\\": "src/"
     }
   }
 }

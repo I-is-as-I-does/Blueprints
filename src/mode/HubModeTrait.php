@@ -1,12 +1,12 @@
 <?php
 /* This file is part of Blueprints | SSITU | (c) 2021 I-is-as-I-does */
 
-namespace SSITU\Blueprints;
+namespace SSITU\Blueprints\Mode;
 
 trait HubModeTrait
 {
     protected $modeChecker;
-    public function setModeChecker(callable $modeChecker)
+    public function setModeChecker( $modeChecker)
     {
         $this->modeChecker = $modeChecker;
     }
