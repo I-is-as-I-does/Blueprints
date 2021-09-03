@@ -35,14 +35,13 @@ trait FlexLogsTrait
     }
 
     //@doc: if logger is set, local logs only retains last log entry
-    protected function log(string|int $level, string $message, mixed $context)
+    protected function log(string|int $level, string $message, mixed $context = null)
     {
-        $argm = get_defined_vars();
         if (isset($this->logger)) {
-            $this->logger->log(...$argm);
-            $this->localLogs = [$argm];
+            $this->logger->log($level, $message, $context);
+            $this->localLogs = [$level, $message, $context];
         } else {
-            $this->localLogs[] = $argm;
+            $this->localLogs[] = [$level, $message, $context];
         }
     }
 

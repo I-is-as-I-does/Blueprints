@@ -7,9 +7,9 @@ trait AdminModeTrait
 {
     private $adminMode = false;
 
-    public function enterAdminKey(string $key, string $envIndex)
+    public function enterAdminKey(string $key)
     {
-        $this->adminMode = password_verify($key, $_ENV[$envIndex]);
+        $this->adminMode = password_verify($key, $_ENV['ADMIN_HASH']);
     }
 
     public function inAdminMode()

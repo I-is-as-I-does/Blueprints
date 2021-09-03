@@ -21,7 +21,7 @@ trait EnderReqTrait
     protected function register(mixed $callback, array $argm = [], int $priority = 2)
     {
         if (isset($this->ender) && method_exists($this->ender, 'register')) {
-            $id = $this->ender->register(get_defined_vars());
+            $id = $this->ender->register($callback, $argm, $priority);
             return $id;
         }
         return false;

@@ -4,8 +4,8 @@
 
 namespace SSITU\Blueprints\Mail;
 
-
-interface MailerInterface {
+interface MailerInterface
+{
 
     public function sendMail(string $recipient, string $subject, string $message, array $cc = [], array $bcc = [], array $attch = []);
 
