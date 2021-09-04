@@ -6,6 +6,6 @@ namespace SSITU\Blueprints\Mode;
 interface AdminModeInterface
 {
 
-    public function enterAdminKey(string $key,string $envIndex);
+    public function enterAdminKey(string $key);
     public function inAdminMode();
 }
