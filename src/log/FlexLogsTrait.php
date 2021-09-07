@@ -45,4 +45,18 @@ trait FlexLogsTrait
         }
     }
 
+    protected function hubLog()
+    {
+        return function(string|int $level, string $message, mixed $context = null) {
+           $this->log($level, $message, $context);
+        };
+    }
+
+    protected function relayLog(object $relatedClass)
+    {
+        if(method_exists($relatedClass, 'setHubLog')){
+            $relatedClass->setHubLog($this->hubLog());
+        }
+    }
+
 }
