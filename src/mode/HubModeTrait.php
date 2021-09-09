@@ -6,12 +6,15 @@ namespace SSITU\Blueprints\Mode;
 trait HubModeTrait
 {
     protected $modeChecker;
-    public function setModeChecker( $modeChecker)
+    public function setModeChecker($modeChecker)
     {
         $this->modeChecker = $modeChecker;
     }
-    protected function inAdminMode()
+    public function inAdminMode()
     {
+        if(!empty($this->modeChecker)){
         return call_user_func($this->modeChecker);
+    }
+    return false;
     }
 }

@@ -6,5 +6,6 @@ namespace SSITU\Blueprints\Mode;
 interface HubModeInterface {
     
     public function setModeChecker( $modeChecker);
+    public function inAdminMode();
 
 }

@@ -12,7 +12,9 @@ trait HubLogsTrait
     }
     protected function log(string|int $level, string $message, mixed $context = null)
     {
-        $log = $this->hubLog;
-        $log($level, $message, $context);
+        if($log = $this->hubLog){
+            $log($level, $message, $context);
+        }
+        
     }
 }
